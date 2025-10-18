@@ -8,7 +8,7 @@ namespace VehicleManagementSystem.Models
 {
     internal class Motorcycle: Vehicle
     {
-        public bool HasCarrier { get; set; }
+        public double weight { get; set; }
 
         public override double CalculateRentalPrice(int numberOfDays)
         {
@@ -19,7 +19,7 @@ namespace VehicleManagementSystem.Models
         {
 
             return base.ToString() +
-                   $",Has Carrier: {HasCarrier}";
+                   $",Weight: {weight}";
         }
     }
 }
