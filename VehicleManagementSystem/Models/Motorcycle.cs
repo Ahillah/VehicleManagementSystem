@@ -9,5 +9,17 @@ namespace VehicleManagementSystem.Models
     internal class Motorcycle: Vehicle
     {
         public bool HasCarrier { get; set; }
+
+        public override double CalculateRentalPrice(int numberOfDays)
+        {
+            return numberOfDays * (Year / 100);
+        }
+
+        public override string ToString()
+        {
+
+            return base.ToString() +
+                   $",Has Carrier: {HasCarrier}";
+        }
     }
 }
